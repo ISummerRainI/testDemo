@@ -60,7 +60,7 @@
     "build:dev": "cross-env REACT_APP_STAGE=dev node scripts/build.js",
     "build:test": "cross-env REACT_APP_STAGE=test node scripts/build.js",
     "build:prod": "cross-env REACT_APP_STAGE=prod node scripts/build.js",
-    "test": "cross-env REACT_APP_STAGE=local jest"
+    "test": "jest"
   },
   "babel": {
     "presets": [
