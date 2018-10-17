@@ -60,7 +60,7 @@
     "build:dev": "cross-env REACT_APP_STAGE=dev node scripts/build.js",
     "build:test": "cross-env REACT_APP_STAGE=test node scripts/build.js",
     "build:prod": "cross-env REACT_APP_STAGE=prod node scripts/build.js",
-    "test": "jest"
+    "test": "jest --coverage"
   },
   "babel": {
     "presets": [
@@ -78,8 +78,7 @@
     "enzyme-adapter-react-16": "^1.6.0",
     "jest": "^23.6.0",
     "less": "^3.8.0",
-    "less-loader": "^4.1.0",
-    "react-addons-test-utils": "^15.6.2"
+    "less-loader": "^4.1.0"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -90,6 +89,9 @@
       "src",
       "node_modules"
     ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    },
     "moduleNameMapper": {
       "^components(.*)$": "<rootDir>/src/components$1",
       "^pages(.*)$": "<rootDir>/src/pages$1",

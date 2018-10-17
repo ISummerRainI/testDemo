@@ -24,7 +24,6 @@ describe("登陆页测试", () => {
   const passwordInput = wrapper.find('.password').find('input');
   const accountTitle = wrapper.find('.account .name').find('span');
   const eyeIcon = wrapper.find('.password').find('Iconfont');
-  const submitBtn = wrapper.find('.btn-box').find('Button');
 
   // 1、title显示
   it('标题显示', () => {
