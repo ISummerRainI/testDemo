@@ -5,6 +5,7 @@ import { connect } from 'react-redux'
 import { addTest, reduceTest } from 'models/actions/test-action';
 import axios from 'services/axios';
 import Iconfont from 'components/Iconfont';
+import UploadImg from 'components/UploadImg';
 
 import './index.less';
 
@@ -72,6 +73,15 @@ class Home extends Component {
         <Button type="primary" onClick={this.sendAjax}>点击发送请求</Button>
         <br />
         {this.props.testData}
+        <hr />
+        <UploadImg
+          className="upload-file"
+          // checkWidth="121"
+          // checkHeight="121"
+          maxSize="2048"
+          accept={['jpg', 'png']}
+          uploadUrl = "****"
+        />
       </div>
     );
   }
